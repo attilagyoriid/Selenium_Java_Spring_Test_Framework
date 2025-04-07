@@ -20,6 +20,7 @@
 ![Lombok][Lombok]
 
 ## 🚀 Run Tests (test set runs with 2 threads parallel by default)
+ 
 
 1. ___Local Execution___:
    1. mvn clean test -Dcucumber.filter.tags="@ui" -Dspring.profiles.active=local
@@ -39,7 +40,8 @@
 5. ___Parallel Execution:___
    1. By default dataproviderthreadcount is 1 running tests in one thread
       1. use -Ddataproviderthreadcount=2 to run test set in parallel
-   2. @ui test set can be run in parallel
+   2. @ui test set can be run in parallel:  mvn clean test -Dcucumber.filter.tags="@ui" -Dbrowser=firefox -Dspring.profiles.active=local -Ddataproviderthreadcount=6
+
 
 ## 📋Test Output
 1. ___Cucumber report:___ /reports/cucumber-report.html
