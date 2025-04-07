@@ -12,6 +12,12 @@ public class HarnessUtils {
     @Value("${default.wait:3000}")
     private static long wait;
 
+    /**
+     * Pauses the execution for a specified duration.
+     *
+     * @param millis the duration in milliseconds to wait
+     */
+
     public static void waitFor(long millis) {
         try {
             Thread.sleep(millis);
@@ -21,6 +27,9 @@ public class HarnessUtils {
         }
     }
 
+    /**
+     * Pauses the execution for the default duration specified in the application properties.
+     */
     public static void waitFor() {
         try {
             Thread.sleep(wait);
